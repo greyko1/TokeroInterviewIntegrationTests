@@ -49,6 +49,7 @@ namespace TokeroInterviewIntegrationTests.Tests
       await contactPage.SubmitMessageButtonClick();
 
       //Assert
+      //contactPage.MessageSentSuccessfullyIsVisible Assert disabled due to reCAPTCHA
       //Assert.IsTrue(await contactPage.MessageSentSuccessfullyIsVisible());
       Assert.That(contactPage.ContactFormPageUrl().Result.Contains("/contact/"), Is.True);
     }
@@ -95,9 +96,9 @@ namespace TokeroInterviewIntegrationTests.Tests
       await contactPage.SubmitMessageButtonClick();
 
       //Assert
+      //contactPage.MessageSentSuccessfullyIsVisible Assert disabled due to reCAPTCHA
       //Assert.IsTrue(await contactPage.MessageSentSuccessfullyIsVisible());
       Assert.That(contactPage.ContactFormPageUrl().Result.Contains("/contact/"), Is.True);
-
     }
   }
 
@@ -144,9 +145,9 @@ namespace TokeroInterviewIntegrationTests.Tests
       await contactPage.SubmitMessageButtonClick();
 
       //Assert
+      //contactPage.MessageSentSuccessfullyIsVisible Assert disabled due to reCAPTCHA
       //Assert.IsTrue(await contactPage.MessageSentSuccessfullyIsVisible());
       Assert.That(contactPage.ContactFormPageUrl().Result.Contains("/contact/"), Is.True);
-
     }
   }
 }

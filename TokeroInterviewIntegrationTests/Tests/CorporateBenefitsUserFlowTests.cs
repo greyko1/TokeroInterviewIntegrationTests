@@ -104,14 +104,17 @@ namespace TokeroInterviewIntegrationTests.Tests
         await homePage.SwitchLanguage(language);
       }
 
+      //Act
       await homePage.CorporateButtonClick(language);
       await page.WaitForURLAsync(expectedUrl);
+      
       var expected = CorporateBenefitsText["Benefits"][language];
 
       var actualHeader = await corporatePage.FindCorporatePageHeaderText(expected.BenefitHeader);
 
       var actualbenefits = await corporatePage.FindCorporatePageBenefitsListText();
 
+      //Assert
       Assert.That(expected.BenefitHeader,Is.EqualTo(actualHeader));
       Assert.That(expected.BenefitsList, Is.EquivalentTo(actualbenefits));
     }

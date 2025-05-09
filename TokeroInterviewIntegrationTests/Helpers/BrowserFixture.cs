@@ -1,5 +1,4 @@
 ﻿using Microsoft.Playwright;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace TokeroInterviewIntegrationTests.Helpers
 {
@@ -10,7 +9,6 @@ namespace TokeroInterviewIntegrationTests.Helpers
     public IBrowserContext? Context { get; set; }
     public IPage? Page { get; set; }
 
-    //[SetUp]
     public async Task SetUp(string browserName)
     {
       _playwright = await Playwright.CreateAsync();
@@ -25,13 +23,11 @@ namespace TokeroInterviewIntegrationTests.Helpers
       Page = await Context.NewPageAsync();
     }
 
-    //[TearDown]
     public async ValueTask DisposeAsync()
     {
       await Context.CloseAsync();
       await _browser.CloseAsync();
       _playwright?.Dispose();
     }
-
   }
 }

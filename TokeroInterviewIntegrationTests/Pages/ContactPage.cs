@@ -19,7 +19,6 @@ namespace TokeroInterviewIntegrationTests.Pages
     private ILocator ContactFormName => _page.Locator("#contact-form-name");
     private ILocator ContactFormEmail => _page.Locator("#contact-form-email");
     private ILocator ContactFormPhone => _page.Locator("#contact-form-phone");
-    private ILocator ContactFormPrefix => _page.Locator("#contact-form-prefix");
     private ILocator ContactFormMessage => _page.Locator("#contact-form-message");
     private ILocator ContactFormSubmitButton => _page.Locator("#contact-form-submitBtn");
     private ILocator MessageSentSuccessfully => _page.GetByText("Thank you for contacting us.");
